@@ -1,3 +1,4 @@
+const { String } = require("core-js");
 
 (function () { 
 
@@ -41,10 +42,17 @@
   })
 
 
+  // Efeito Digitação
+  const typed = select('.typed');
 
-
-
-
+  if (typed) {
+    let typed_strings = typed.getAttibute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new typed('.typed', {
+      Strings: typed_strings
+    });
+    
+  }
 
 
 

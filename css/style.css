@@ -1,73 +1,70 @@
 /* variavel para as cores */
 :root {
 
-    :root {
+    --background-color: #5a738e; /* Azul acinzentado suave do fundo */
+    
+    --fundo-menu-lateral: #3d5673; /* Azul médio mais discreto */
+    --fundo-claro: #7c96b3; /* Azul claro semelhante ao tom do castelo */
+    --fundo-escuro: #2b3f5c; /* Azul mais profundo para seções escuras */
 
-        --background-color: #e83333;
-    
-        --fundo-menu-lateral: #1582da;
-        --fundo-claro: #1677c6;
-        --fundo-escuro: #5c17af;
-    
-        --borda-clara: #42a0ed;
-        --borda-escura: #267cc1;
-    
-        --texto-escuro: #141414;
-        --texto-claro: #267cc1;
-        --texto-branco: #ffffff;
-        --texto-hover: #5e1dad;
-        --texto-opaco: #81888c;
-    
-        --cor-detalhes: #42a0ed;
-    
-        --texto-titulo-claro: #267cc1;
-        --texto-titulo-escuro: #5e1dad;
-    
-        --sombra-clara: rgba(66, 160, 237, 0.3);
-        --sombra-escura: rgba(20, 20, 20, 0.1);
-    }
+    --borda-clara: #aebed1; /* Azul acinzentado claro para detalhes sutis */
+    --borda-escura: #4c627f; /* Azul médio para contrastes leves */
+
+    --texto-escuro: #ffffff; /* Branco puro para textos principais */
+    --texto-claro: #d3dbe5; /* Azul muito claro para textos secundários */
+    --texto-branco: #ffffff; /* Branco para maior destaque */
+    --texto-hover: #b8c7dc; /* Azul suave para interações */
+    --texto-opaco: #95a2b5; /* Azul acinzentado para textos menos destacados */
+
+    --cor-detalhes: #d8e0ed; /* Azul claro brilhante para realces sutis */
+
+    --texto-titulo-claro: #d3dbe5; /* Azul claro para títulos */
+    --texto-titulo-escuro: #ffffff; /* Branco para títulos em fundos escuros */
+
+    --sombra-clara: rgba(216, 224, 237, 0.3); /* Sombra suave azulada */
+    --sombra-escura: rgba(43, 63, 92, 0.5); /* Sombra azul profundo para realce */
+
 }
 
 /* CSS Geral */
 body {
-
     font-family: "Roboto", sans-serif;
     color: var(--texto-claro);
-    background: var(--fundo-escuro)
+    background: var(--fundo-escuro);
 }
 
-/* Cabeçalho */
+/* cabeçalho */
 #header {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 300px;
-    background-color:  var (--fundo-menu-lateral);
-    padding:0 15px;
+    background-color: var(--fundo-menu-lateral);
+    padding: 0 15px;
     overflow-y: auto;
     z-index: 99;
-    transition:all ease-in-out 0,5s;
+    transition: all ease-in-out 0.5s;
 }
 
 #header .perfil img {
     margin: 15px auto;
     display: block;
-    width: 120px;
+    width: 13rem;
     border: 2px solid var(--borda-clara);
-    box-sizing: 0 0 5px var var(--sombra-clara);
+    box-sizing: 0 0 5px var(--sombra-clara);
 }
 
 #header .perfil h1 {
-    font-size: 24;
+    font-size: 24px;
     margin: 25px;
     padding: 0;
     font-weight: 600;
     text-align: center;
     color: wheat;
-    font-family: "Montaga", sans-serif;
-    /* font-family: ; */
 }
+
+/* Redes Socias */
 
 .perfil .social-links i {
     font-size: 18px;
@@ -82,34 +79,34 @@ body {
     width: 35px;
     height: 35px;
     transition: 0.3s;
-    box-shadow: 0px 0px 5px 0px var(--sombra-clara);
+    box-shadow: 0px 0px 5px 0px var(--sombra-escura);
 }
 
-.perfil .social-links a:hover.social-links i:hover {
+.perfil .social-links a:hover,
+.social-links i:hover {
     font-size: 18px;
     display: inline-block;
     background: white;
-    color: black;
+    color: var(--texto-escuro);
     margin-right: 5px;
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    box-shadow: 0px 0px 5px 0px var(--sombra-clara);
+    box-shadow: 0px 0px 5px 0px var(--sombra-escura);
 }
 
-/* Menu mobile */
 .mobile-nav-toggle {
     position: fixed;
-    right: 15px;
     top: 15px;
     right: 15px;
-    z-index: 9999;
+    z-index: 99999;
     border: 0;
-    font-size: 25px;
-    transition: all 0.5s;
-    background: var(--cor-detalhes);
+    font-size: 26px;
+    transition: all 0.4s;
+    background: var(--fundo-menu-lateral);
     color: var(--texto-claro);
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -119,29 +116,24 @@ body {
 
 .mobile-nav-active {
     overflow: hidden;
-
 }
 
 .mobile-nav-active #header {
     left: 0;
 }
-
-/* Ajuste para o Corpo do Conteudo */
+/* Ajuste para o corpo do conteudo */
 
 /* menu responsivo */
-@media (max-width: 1199px){
+
+@media (max-width: 1199px) {
     #header {
         left: -300px;
     }
 }
 
-/* Menu do Header */ 
+/* menu do header */
 
-.nav-menu {
-    padding: 30px 0 0 0;
-}
-
-.nav-menu * {
+.nav-menu *{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -151,7 +143,6 @@ body {
     position: relative;
     white-space: nowrap;
 }
-
 .nav-menu a,
 .nav-menu:focus {
     display: flex;
@@ -162,25 +153,74 @@ body {
     transition: 0.3s;
     font-size: 15px;
 }
-
-.nav-menu a i,
-.nav-menu a:focus i {
-    font-size: 22px;
-    padding-right: 10px;
-}
-
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
     text-decoration: none;
-    color: var(--texto-claro);
+    color: var(--sombra-escura);
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-    color: var(--cor-detalhes);
-    font-weight: 600;
+    color: var(--sombra-escura);
+}
+
+/* HERO */
+#hero {
+    width: 100%;
+    height: 100vh; /* view Port Heigth */
+    background: url("../img/bg-hero.png");
+    /* Criar img na I.A */
+    background-size: cover;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background-color: rgba(102, 81, 234, 0.652);
+}
+
+#hero .hero-container {
+    z-index: 3;
+    position: relative;
+    min-height: 300px;
+    background: var(--background-color);
+}
+
+#hero h2 {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 120px;
+    color: var(--texto-claro);
+}
+
+#hero p {
+    color: var(--texto-branco);
+    margin-bottom: 50px;
+    font-size: 26px;
+
+}
+
+#hero p span {
+    color: var(--texto-claro);
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid var();
+}
+
+
+/* estrutura Base - Corpo */
+
+
+
+#header h1 {
+    color: var(--texto-escuro);
+    text-align: center;
 }
