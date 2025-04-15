@@ -233,8 +233,34 @@ body {
     padding-right: 30px;
 }
 
+/* Seções e Titulos */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    background: #584ac7;
+}
 
-#header h1 {
+.section-bg {
+    /* escura */
+    /* background: var(--section-escura); */
+    background: cornflowerblue;
+    color: var(--texto-claro);
+}
+
+/* Estrutura do Titulo Seção */
+.section-tittle {
+    padding-bottom: 30px;
+}
+
+/* título H2 */
+.section-tittle h2 {
     color: var(--texto-escuro);
-    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20 px;
+    padding-bottom: 20 px;
+    position: relative;
+}
+
+.section-tittle h2::after {
+
 }
