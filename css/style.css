@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 /* variavel para as cores */
 :root {
@@ -30,7 +31,7 @@
 
 /* CSS Geral */
 body {
-    font-family: "Winky Rough", sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: var(--texto-claro);
     background: var(--fundo-escuro);
 }
@@ -124,8 +125,19 @@ body {
     left: 0;
 }
 /* Ajuste para o corpo do conteudo */
+/* estrutura Base - Corpo */
+
+#main {
+    margin-left: 300px;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 /* menu responsivo */
+
 
 @media (max-width: 1199px) {
     #header {
@@ -196,6 +208,7 @@ body {
 }
 
 #hero .hero-container {
+    font-family: "Playwrite CU", cursive;
     z-index: 3;
     position: relative;
     min-height: 300px;
@@ -232,8 +245,8 @@ body {
 
 @media (max-width: 768px) {
     #hero h2 {
-        font-size: 90px;
-        line-height: 1px;
+        font-size: 70px;
+        line-height: 1;
         margin-bottom: 20px;
     }
     
@@ -307,4 +320,27 @@ section {
 .sobre .content ul {
     list-style: none;
     padding: 0;
+}
+
+.sobre .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sobre .content ul strong {
+    margin-right: 5px;
+    font-weight: 600;
+    /* letter-spacing: .5px; */
+    font-family: "Quicksand", sans-serif;
+}
+
+
+
+
+.sobre .content ul i {
+    color: var(--borda-clara);
+    margin-right: 10px;
+    font-size: 20px;
 }
