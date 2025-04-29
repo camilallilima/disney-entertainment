@@ -59,7 +59,7 @@
 
   }
 
-
+    new PureCounter();
 
 
 })()
