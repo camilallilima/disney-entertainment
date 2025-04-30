@@ -204,7 +204,7 @@ body {
     position: absolute;
     z-index: 2;
     inset: 0;
-    background-color: rgba(102, 81, 234, 0.652);
+    background-color: rgba(70, 75, 209, 0.652);
 }
 
 #hero .hero-container {
@@ -375,7 +375,7 @@ section {
 .conquistas .count-box p {
     padding: 15px 0 0 0;
     margin: 0 0 0 60px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .conquistas .count-box strong {
@@ -385,4 +385,35 @@ section {
 .conquistas .count-box i:hover, .conquistas .count-box span:hover {
     color: var(--fundo-claro);
     transition: ease-in-out .5s;
+}
+
+/* Vendas // Skills = Habilidades */
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill {
+    padding: 0;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    display: block;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills .progress .skill .val {
+    font-style: normal;
+    float: right;
+    color: rgb(43, 50, 128);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills .progress-bar-bg {
+    background: #3e028d;
+    height: 10px;
 }
